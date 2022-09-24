@@ -1,6 +1,7 @@
 package com.example.tp_taller_programacion.android
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 import retrofit2.http.GET
 import retrofit2.http.Headers
 import retrofit2.http.Query
@@ -16,25 +17,29 @@ interface MarvelCharactersClient {
 
 }
 
+@Serializable
 data class CharactersResponse(
-    @SerializedName("data") val characters: CharacterData
+    @SerialName("data") val characters: CharacterData
 )
 
+@Serializable
 data class CharacterData(
-    @SerializedName("results")
+    @SerialName("results")
     val list: List<CharacterResult>
 )
 
+@Serializable
 data class CharacterResult(
-    @SerializedName("id") val id: Long,
-    @SerializedName("name") val name: String,
-    @SerializedName("description") val description: String,
-    @SerializedName("thumbnail") val thumbnail: Thumbnail
+    @SerialName("id") val id: Long,
+    @SerialName("name") val name: String,
+    @SerialName("description") val description: String,
+    @SerialName("thumbnail") val thumbnail: Thumbnail
 )
 
+@Serializable
 data class Thumbnail(
-    @SerializedName("path") val path: String,
-    @SerializedName("extension") val extension: String
+    @SerialName("path") val path: String,
+    @SerialName("extension") val extension: String
 ) {
     fun toUrl() = "$path.$extension"
 }
