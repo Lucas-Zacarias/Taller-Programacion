@@ -24,8 +24,7 @@ kotlin {
     
     sourceSets {
         val commonMain by getting {
-            dependencies {
-                implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0") // Para utilizar con Retrofit
+            dependencies{
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0")
             }
         }
