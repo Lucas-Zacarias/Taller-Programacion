@@ -1,5 +1,7 @@
 package com.example.tp_taller_programacion.android
 
+import com.example.tp_taller_programacion.data.CharactersResponse
+
 class RetrofitCharactersRepository(private val apiClient: MarvelCharactersClient) :
     CharactersRepository {
 

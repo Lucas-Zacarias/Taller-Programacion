@@ -2,6 +2,7 @@ plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
     id("com.android.library")
+    kotlin("plugin.serialization") version "1.7.10"
 }
 
 kotlin {
@@ -22,7 +23,12 @@ kotlin {
     }
     
     sourceSets {
-        val commonMain by getting
+        val commonMain by getting {
+            dependencies {
+                implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0") // Para utilizar con Retrofit
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0")
+            }
+        }
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test"))
