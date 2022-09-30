@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 import com.example.tp_taller_programacion.android.databinding.ActivityCharactersBinding
 import kotlinx.coroutines.launch
+import com.example.tp_taller_programacion.data.Character
 
 class CharactersActivity : AppCompatActivity() {
 

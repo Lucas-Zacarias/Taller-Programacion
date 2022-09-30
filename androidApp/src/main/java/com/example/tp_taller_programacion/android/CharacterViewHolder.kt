@@ -3,6 +3,7 @@ package com.example.tp_taller_programacion.android
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tp_taller_programacion.android.databinding.ListItemCharacterBinding
 import com.squareup.picasso.Picasso
+import com.example.tp_taller_programacion.data.Character
 
 class CharacterViewHolder(private val binding: ListItemCharacterBinding) : RecyclerView.ViewHolder(binding.root) {
 

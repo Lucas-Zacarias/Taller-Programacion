@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tp_taller_programacion.android.databinding.ListItemCharacterBinding
+import com.example.tp_taller_programacion.data.Character
 
 class CharactersAdapter : RecyclerView.Adapter<CharacterViewHolder>() {
 

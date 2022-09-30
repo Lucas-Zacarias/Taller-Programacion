@@ -7,6 +7,8 @@ import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
+import com.example.tp_taller_programacion.domain.servicies.CharactersService
+import com.example.tp_taller_programacion.data.Character
 
 class CharactersViewModel(
     private val charactersService: CharactersService
@@ -21,7 +23,7 @@ class CharactersViewModel(
 
     init {
         viewModelScope.launch(coroutineExceptionHandler) {
-            val list = charactersService.getCharacters()
+            val list = charactersService.getMarvelCharacters()
             _screenState.value = ScreenState.ShowCharacters(list)
         }
     }
