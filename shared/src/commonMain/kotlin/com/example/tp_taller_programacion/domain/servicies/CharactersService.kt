@@ -38,7 +38,7 @@ class CharactersService {
         }
     }
 
-    private fun sortCharacters(characters: List<Character>): List<Character> {
+    fun sortCharacters(characters: List<Character>): List<Character> {
         return characters.sortedWith(characterComparator)
     }
 }
